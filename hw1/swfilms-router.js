@@ -11,7 +11,7 @@ module.exports = function (callback) {
 
         swfilmsRouter.route('/')
             .all(function (req, res, next) {
-                //res.writeHead(200, { 'Content-Type': 'application/json' });
+                res.setHeader( 'Access-Control-Allow-Origin', '*');
                 next();
             })
 

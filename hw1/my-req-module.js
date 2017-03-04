@@ -9,6 +9,7 @@ var results;
 module.exports = getStarWarsMovies;
 
 function getStarWarsMovies(callback) {
+    final_result = [];
     request({
         uri: "http://swapi.co/api/films/",
         method: "GET",

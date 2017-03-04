@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div id="content">
+        <ul id="list">
+
+        </ul>
+    </div>
+</body>
+
+
+<script>
+    $.get("http://localhost:6969/swfilms/", function (data) {
+        console.log(data);
+        for (index in data) {
+            $("#list").append('<li id="' + index + '>')
+                .append(data[index]['original_title'] + "<br>")
+                .append('homepage: ' + data[index]['homepage'] + "<br>")
+                .append('imdb_id: ' + data[index]['imdb_id'] + "<br>")
+                .append('release_date: ' + data[index]['release_date'] + "<br>")
+                .append('vote_average: ' + data[index]['vote_average'] + "<br>")
+                .append('overview: ' + data[index]['overview'] + "<br>")
+                .append('</li><br><br><br>');
+        }
+
+    }, "json");
+
+</script>
+
+</html>
