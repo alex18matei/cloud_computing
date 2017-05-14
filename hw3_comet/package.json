@@ -1,0 +1,25 @@
+{
+  "name": "comet-chat",
+  "version": "0.0.1",
+  "description": "my first socket.io app",
+  "scripts": {
+    "deploy": "gcloud app deploy",
+    "start": "node server.js",
+    "lint": "samples lint",
+    "pretest": "npm run lint",
+    "system-test": "samples test app",
+    "test": "npm run system-test",
+    "e2e-test": "samples test deploy"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3"
+  },
+  "main": "server.js",
+  "devDependencies": {},
+  "keywords": [
+    "comet"
+  ],
+  "author": "matei",
+  "license": "ISC"
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Socket.IO chat</title>
+
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <!-- Compiled and minified JavaScript -->
+
+  <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="main">
+    <div class="mesaje">
+
+      <ul class="tabs">
+        <li class="tab col s3"><a class="active" href="#group">GROUP</a></li>
+      </ul>
+      
+      <ul id="group"></ul>
+
+    </div>
+
+    <div id="typing_on"></div>
+
+    <div class="form-message">
+      <form class="form-message" action="">
+        <input clas="input-field" placeholder="Message..." id="m" autocomplete="off" />
+        <button class="btn waves-effect waves-light" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="online-users">
+    <ul id="users"></ul>
+  </div>
+
+  <div id="modal-user" class="modal">
+    <div class="modal-content">
+      <form class="form-user" action="">
+        <label for="user_name">User name</label>
+        <input id="user_name" autocomplete="off" type="text" />
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/_comet.io/comet.io.client.js"></script>
+  <script src="index.js" type="text/javascript"></script>
+</body>
+
+</html>
